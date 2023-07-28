@@ -1,0 +1,276 @@
+
+
+body {
+    /* background-color: #EEDCCF !important; */
+    background-color: rgb(239, 239, 239) !important
+    /* background-color: -webkit-linear-gradient(left, red, green ) !important; */
+}
+
+.signUp {
+    width: 90%;
+    height: 75%;
+    background: rgb(216, 217, 217);
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* text-align: center; */
+    /* padding: 0 20px 20px; */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-top: 30px;
+    display: flex;
+    /* gap: 20px */
+}
+
+.signUp-form {
+    margin-right: 15px;
+    margin-top: 50px;
+
+}
+
+.signUp-form-input label {
+    font-size: 20px;
+
+}
+
+.signUp-block1 {
+    /* width: 50vw;
+    display: flex; */
+    width: 65%;
+    align-items: center;
+    justify-content: center;
+}
+.signUp-block2 {
+    /* width: 50vw;
+    display: flex; */
+    width: 35%;
+    align-items: center;
+    justify-content: center;
+}
+
+.signUp-camera {
+    position: relative;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 20px;
+    width: 90%;
+    /* -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); */
+}
+
+.home {
+    width: 90%;
+    height: 75%;
+    margin-top: 30px;
+    background: rgb(216, 217, 217);
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* text-align: center; */
+    /* padding: 0 40px 40px; */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2)
+}
+
+.home img {
+    /* width: 50vw;
+    display: flex; */
+    position: absolute;
+    height: 80%;
+    /* width: 80%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+
+input[type=text] {
+    border-radius: 10px;
+}
+
+.signUp-form-input {
+    margin-top: 10px;
+}
+
+.imgInList {
+    height: 80px;
+    width: 80px;
+}
+
+.column-center {
+    text-align: center;
+    vertical-align: middle
+}
+
+.column-left {
+    text-indent: 10px;
+    vertical-align: middle
+}
+
+.popup {
+    margin-top: 30px;
+    width: 80%;
+    height: 70%;
+    background: rgb(251, 247, 229);
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2)
+}
+
+.popup img {    
+    position: relative;
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    /* left: 50%;
+    transform: translateX(-50%); */
+}
+
+.popup button {
+    display: inline-block;
+    /* position: relative; */
+    vertical-align: middle;
+    color: white;
+    width: 30%;
+    height: 120px;
+    /* margin-top: 50px; */
+    /* background: #6fd649; */
+    background: #010321;
+    font-size: 20px; 
+    border: 0;
+    border-radius: 5px;
+    /* padding: 10px 0; */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-right: 10px;
+    /* outline: none; */    
+}
+
+.popup button :first-child{
+    margin-left: -5px;
+}
+.open-popup {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+.checkIn_box {
+    width: 90%;
+    height: 75%;
+    background: rgb(247, 247, 247);
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* padding: 0 30px 30px; */
+    margin-top: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2)
+}
+.checkIn_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* visibility: hidden; */
+    /* transition: transform 0.4s; */
+    /* background-color: yellow; */
+}
+.checkIn_flex {
+    margin-top: 10px;
+    height: 250px;
+    width: 250px;
+    /* background-color: aquamarine; */
+}
+.checkIn_img img {
+    width: 200px;
+}
+
+.checkIn {
+    width: 90%;
+    height: 75%;
+    background: rgb(216, 217, 217);
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* text-align: center; */
+    /* padding: 0 20px 20px; */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-top: 30px;
+    display: flex;
+    /* gap: 20px */
+}
+
+.checkIn-camera {
+    position: relative;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 20px;
+    width: 90%;
+    /* -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); */
+}
+
+.checkIn-block1 {
+    /* width: 50vw;
+    display: flex; */
+    width: 65%;
+    align-items: center;
+    justify-content: center;
+}
+.checkIn-block2 {
+    /* width: 50vw;
+    display: flex; */
+    width: 35%;
+    align-items: center;
+    justify-content: center;
+}
+.checkIn_text {
+    font-size: 48px;
+    margin: 20px;
+}
+
+.checkIn-form {
+    margin-right: 30px;
+    margin-top: 165px;
+
+}
+
+.button0 {
+    margin-top: 20px;
+    font-size: 30px !important;
+    background-color: #020311 !important;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nofication1 {
+    font-size: 30px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.nav-link {
+    color: white !important;
+}

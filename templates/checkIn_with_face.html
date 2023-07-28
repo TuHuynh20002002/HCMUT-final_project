@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Check In 
+{% endblock %}
+
+{% block content %}
+<div class="checkIn">
+    <div class="checkIn-block1">
+        <img src="{{url_for('camera')}}" alt="{{url_for('static', filename='img/alt.jpg')}}" class="checkIn-camera">
+        <!-- <img src="{{url_for('static', filename='img/img.jpg')}}" class="checkIn-camera"/> -->
+    </div>
+    <div class="checkIn-block2">
+        <form class="checkIn-form" id="formCheckIn">
+            <div class="checkIn-form-submit">
+                <button type="submit" class="btn btn-primary button0" onclick=openPopup()>Check In</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="popup1" class="popup"> 
+    <img src="{{url_for('static', filename='img/tick.png')}}" id="tick"/>
+    <br>
+    <br>
+    <div id="welcomeNofication" class="alert alert-success"></div>
+    <a href="{{url_for('checkIn_page')}}">
+        <button id="face_confirm" onclick=closePopup1() style="background-color: rgb(0,186,63);">Confirm</button>
+    </a>
+    <button onclick=closePopup1()>It's not me<br>(Try Again)</button>
+    <a href="{{url_for('checkIn_page')}}">
+        <button onclick=closePopup1()>It's not me<br>(Back To Check In Page)</button>
+    </a>
+    </div>
+<div id="popup2" class="popup"> 
+    <img src="{{url_for('static', filename='img/wrong.png')}}" id="wrong"/>
+    <br>
+    <br>
+    <div id="unknownNofication" class="alert alert-danger"></div>
+    <button onclick=closePopup2()>Try Again</button>
+    <a href="{{url_for('checkIn_page')}}">
+        <button onclick=closePopup2()>Back To Check In Page</button>
+    </a>
+</div>
+{% endblock %}

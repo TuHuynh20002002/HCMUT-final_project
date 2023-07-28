@@ -1,0 +1,13 @@
+numpy
+# dlib # sudo apt-get install cmake
+# opencv-python
+# face_recognition
+
+flask
+flask_sqlalchemy
+Flask-Migrate
+psycopg2-binary
+
+simplejpeg
+pyserial
+adafruit-circuitpython-fingerprint

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Fingerprint register 
+{% endblock %}
+
+{% block content %}
+<div class="checkIn">
+    <div class="checkIn-block1">
+        <img src="{{url_for('static', filename='img/fingerprint.jpg')}}" alt="" class="checkIn-camera">
+    </div>
+    <div class="checkIn-block2">
+        <form class="checkIn-form" id="fingerprint_form">
+            <div>
+                <button id="fingerprint_signUp_button" type="submit" class="btn btn-primary button0">Start</button>
+            </div>
+        </form>
+        <div id="fingerprintNofication" style="display:none; margin-right: 30px;" class="nofication1"></div>
+        <div id="backToHome_button" style="display:none;">
+            <a href="{{url_for('home_page')}}">
+                <button class="btn btn-primary button0"> Back To Home</button>
+            </a>
+        </div>
+        <div id="tryAgain_button" style="display:none;">
+            <button class="btn btn-primary button0"> Try Again</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

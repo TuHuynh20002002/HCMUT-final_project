@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Sign Up
+{% endblock %}
+
+{% block content %}
+
+<div class="signUp">
+    <div class="signUp-block1">
+        <img src="{{url_for('camera')}}" alt="{{url_for('static', filename='img/alt.jpg')}}" class="signUp-camera">
+        <!-- <img src="{{url_for('static', filename='img/img.jpg')}}" class="signUp-camera"/> -->
+    </div>
+    <br>
+    <div class="signUp-block2">
+        <form class="signUp-form" id="formSignUp">
+            <div class="signUp-form-input">
+                <label for="" class="form-label">Name</label>
+                <input type="text" class="form-control" placeholder="Name" id="nameUser">
+            </div>
+            <div class="signUp-form-input">
+                <label for="" class="form-label">Email</label>
+                <input type="text" class="form-control" placeholder="Email" id="emailUser">  
+            </div>
+            <div class="signUp-form-submit">
+                <button type="submit" class="btn btn-primary button0">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="popup1" class="popup"> 
+    <img src="{{url_for('static', filename='img/tick.png')}}" id="tick"/>
+    <br>
+    <br>
+    <div id="successNofication" class="alert alert-success"></div>
+    <a href="{{url_for('home_page')}}">
+        <button onclick=closePopup1()> OK </button>
+    </a>
+</div>
+<div id="popup2" class="popup"> 
+    <img src="{{url_for('static', filename='img/wrong.png')}}" id="wrong"/>
+    <br>
+    <br>
+    <div id="errorNofication" class="alert alert-danger"></div>
+    <button onclick=closePopup2()> OK </button>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Users
+{% endblock %}
+
+{% block content %}
+<table class="table table-hover table-bordered">
+    <thead class="column-center">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">NAME</th>
+            <th scope="col">TIME CHECK IN</th>
+            <th scope="col">AVATAR</th>      
+        </tr>
+    </thead>
+    <tbody>
+        {% for index, checkIn in checkIn_times %}
+        <tr>
+            <td class="column-center">{{ index }}</td>
+            <td class="column-left">{{ checkIn.users.name }}</td>
+            <td class="column-left">{{ checkIn.time_checkIn }}</td>
+            <td class="column-center"><img src="{{url_for('display_checkIn_image', id=checkIn.id)}}" alt="" class="imgInList img-thumbnail"></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

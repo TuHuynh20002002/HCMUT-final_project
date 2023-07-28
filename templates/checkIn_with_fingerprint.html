@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Check In With Fingerprint
+{% endblock %}
+
+{% block content %}
+<div class="checkIn">
+    <div class="checkIn-block1">
+        <img src="{{url_for('static', filename='img/fingerprint.jpg')}}" alt="" class="checkIn-camera">
+    </div>
+    
+    <div class="checkIn-block2">
+        <div id="nofication1" class="nofication1" style="display: none; margin-top: 150px; margin-right: 30px;"></div>
+        <form id="formCheckInFingerprint" class="checkIn-form">
+            <button class="btn btn-primary button0" id="fingerprint_checkIn_button" type="submit">Check In</button>
+        </form>
+    </div>
+</div>
+    <!-- <div id="popup0" class="popup"> 
+        <br>
+        <div id="Nofication"></div>
+        <button onclick=closePopup0()> CONFIRM </button>
+        <a href="{{url_for('checkIn_page')}}">
+            <button onclick=closePopup0()> IT'S NOT ME /nTRY AGAIN </button>
+        </a>
+    </div> -->
+    <div id="popup1" class="popup"> 
+        <img src="{{url_for('static', filename='img/tick.png')}}" id="tick"/>
+        <br>
+        <br>
+        <div id="welcomeNofication" class="alert alert-success"></div>
+        <a href="{{url_for('checkIn_page')}}">
+            <button id="fingerprint_confirm" onclick=closePopup1 style="background-color: rgb(0,186,63);">Confirm</button>
+        </a>
+        <a href="#">
+            <button id="fingerprint_tryAgain1" onclick=closePopup1()>It's not me<br>(Try Again)</button>
+        </a>
+        <a href="{{url_for('checkIn_page')}}">
+            <button onclick=closePopup1()>It's not me<br>(Back To Check In Page)</button>
+        </a>    
+    </div>
+    <div id="popup2" class="popup"> 
+        <img src="{{url_for('static', filename='img/wrong.png')}}" id="wrong"/>
+        <br>
+        <br>
+        <div id="unknownNofication" class="alert alert-danger"></div>
+        <button id="fingerprint_tryAgain2" onclick=closePopup2()>Try Again</button>
+        <a href="{{url_for('checkIn_page')}}">
+            <button onclick=closePopup2()>Back To Check In Page</button>
+        </a>
+    </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Users
+{% endblock %}
+
+{% block content %}
+<table class="table table-hover table-bordered">
+    <thead class="column-center">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">NAME</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">DATE JOINED</th>
+            <th scope="col">AVATAR</th>   
+            <th scope="col">FINGER TAKEN</th>                     
+        </tr>
+    </thead>
+    <tbody>
+        {% for index, user in users %}
+        <tr>
+            <td class="column-center">{{ index }}</td>
+            <td class="column-left">{{ user.name }}</td>
+            <td class="column-left">{{ user.email }}</td>
+            <td class="column-center">{{ user.day_jonined }}</td>
+            <td class="column-center"><img src="{{url_for('display_image', id= user.id)}}" alt="" class="imgInList img-thumbnail"></td>
+            <td class="column-center">
+                {% if user.fingerprint_taken == True %}
+                Already taken
+                {% else %}
+                <div>Not taken yet</div> 
+                <a href="{{url_for('fingerprint_page', id=user.id)}}">Get fingerprint</a>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
